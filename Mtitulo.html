@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="Epsilon, mobile, framework, css3, html5, javascript, retina" />
+<meta name="Description" content="Epsilon based mobile retina webpp template!" />
+<!--Favicon shortcut link-->
+<link type="image/x-icon" rel="shortcut icon" href="images/splash/cidez.ico" />
+<link type="image/x-icon" rel="icon" href="images/splash/cidez.ico" />
+<!--Declare page as mobile friendly --> 
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+<!-- Declare page as iDevice WebApp friendly -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
+<link rel="apple-touch-icon" sizes="114x114" href="images/splash/splash-icon.png" /> 
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen.png" media="screen and (max-device-width: 320px)" /> 
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen@2x.png" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" /> 
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen@3x.png" sizes="640x1096" />
+
+<!-- Page Title -->
+<title>CIDEZ</title>
+
+<!-- Stylesheet Load -->
+<link href="styles/style.css" rel="stylesheet" type="text/css" />
+<link href="styles/framework-style.css" rel="stylesheet" type="text/css" />
+<link href="styles/framework.css" rel="stylesheet" type="text/css" />
+<link href="styles/icons.css" rel="stylesheet" type="text/css" />
+<link href="styles/retina.css" rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+
+<!--Page Scripts Load -->
+<script src="cordova.js" type="text/javascript"></script>
+<script src="scripts/conex_m_titulo.js" type="text/javascript"></script>
+<script src="scripts/jquery.min.js" type="text/javascript"></script>		
+<script src="scripts/jquery-ui-min.js" type="text/javascript"></script>
+<script src="scripts/contact.js" type="text/javascript"></script>
+<script src="scripts/swipe.js" type="text/javascript"></script>
+<script src="scripts/klass.min.js" type="text/javascript"></script>
+<script src="scripts/photoswipe.js" type="text/javascript"></script>
+<script src="scripts/colorbox.js" type="text/javascript"></script>
+<script src="scripts/retina.js" type="text/javascript"></script>
+<script src="scripts/modernizr.js" type="text/javascript"></script>
+<script src="scripts/slicebox.js" type="text/javascript"></script>
+<script src="scripts/custom.js" type="text/javascript"></script>
+<script src="scripts/salir.js" type="text/javascript"></script>
+<script src="scripts/jquery.blockUI.js" type="text/javascript"></script>
+<script>
+	// invoke blockUI as needed -->
+	$(document).on('click', '#boton', function() 
+	{
+		$.blockUI({ message: '<center><img src="images/status.gif" />Procesando...</center>' });
+		setTimeout($.unblockUI, 60000);
+	});
+</script>
+</head>
+
+<body>
+
+<div id="preloader">
+	<div id="status">
+    	<p class="center-text">
+			<em>Cargando el Contenido...</em>
+            <em>La carga depende de tu velocidad de conexión!</em>
+        </p>
+    </div>
+</div>
+
+<div class="header-decoration"></div>
+
+<div class="nav-page-icons content">
+	<a href="inicio.html" id="nav0" class="go-index">INICIO</a>
+	<a href="http://cidez.net.ve" id="nav1" class="go-home">CIDEZ</a>
+    <a href="mailto:infocidez@gmail.com" id="nav8" class="go-mail">ENVIAR EMAIL</a>
+    <a href="tel:+58 2617921510" id="nav9" class="go-call">LLAMAR CIDEZ</a>
+    <a href="sms:+58 424653066" id="nav10" class="go-text">SMS CIDEZ</a>
+    <a href="#" id="nav11" onClick="SALIR()">SALIR DE LA APLICACION</a>
+    <a href="#" id="navc" class="go-close">CERRAR MENU</a>
+    <div class="nav-decoration decoration"></div>
+</div>
+
+
+<div class="header">
+	<a href="inicio.html" class="deploy-share"></a>
+	<h4>Consulta el Tramite de tu CIV</h4>
+	<a href="#" class="deploy-menu"></a>
+	<div class="decoration"></div>
+</div>
+
+<img src="images/logo/logo.png" alt="img" class="replace-2x logo" width="148" />
+
+<div class="content">
+
+    <center>
+	  <div data-role="fieldcontain">
+
+	      <label for="textinput"><h4>Coloque su Cedula de Identidad:<h4></label>
+	      <input type="number" name="cedula" id="cedula" value="" style="text-align:center; width:100%" maxlength="9"/>
+	    <p>
+        <br>
+               <a href="#" id="boton"><span onClick="Informacion(document.getElementById('cedula').value)"/>
+               <img src="images/buscar.png" alt="Buscar" align="middle"/></span></a>
+               
+               
+	    </p>
+        <div id="cidez"><b></b></div>
+	  </div>
+      </center>
+
+</div>
+
+<div class="landing-footer">
+	<p class="center-text footer-text">
+    <a href="http://www.facebook.com/pages/CENTRO-DE-INGENIEROS-DEL-ESTADO-ZULIA-CIDEZ/57702824105" class="icon icon-facebook"></a>
+    <a href="https://twitter.com/CIDEZ" class="icon icon-twitter1"></a>
+    <a href="inicio.html" id="up" class="icon icon-arrow-up"></a>
+    </p>
+</div>
+<div class="footer-decoration"></div>
+
+</body>
